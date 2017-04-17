@@ -1,6 +1,17 @@
 # RGBLED_Ligh Controller Hardware Part
-For this project, the hardware part is very import,
+For this project, the hardware part is very import, We buy a RGB bulb from Huaqiang North in ShenZhen, it's something just like below picture shows.
 
+![](https://raw.githubusercontent.com/Lee-Kevin/X_Light_Project/master/images/bulb.jpg)
+
+The factory version of the bulb is controlled by an IR Remote controller, for this project, we want to control the bulbs by group or control each bulb independently. So we did a special pcb for this bulb. Just like below picture shows.
+
+![](https://raw.githubusercontent.com/Lee-Kevin/X_Light_Project/master/images/pcb.jpg)
+
+I remove the IR reciver from the factory version, and connect the original IR Reciver Pin to the new board, After assembling the bulb is just as shown in the following figure.
+
+![](https://raw.githubusercontent.com/Lee-Kevin/X_Light_Project/master/images/done.jpg)
+
+About the pcb and the schematic file, you can click **[here](https://github.com/Lee-Kevin/X_Light_Project/tree/master/Hardware)** to download.
 
 # RGBLED_Ligh Controller Software Part
 ------
@@ -86,7 +97,9 @@ More master part to be continued.
 
 The following picture shows how the Light is arrranged.
 
+![](https://raw.githubusercontent.com/Lee-Kevin/X_Light_Project/master/images/x.factory.jpg)
+
 ## The finished work
 
-
+to be continued
 
