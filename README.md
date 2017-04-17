@@ -1,4 +1,8 @@
-# RGBLED_Ligh Controller
+# RGBLED_Ligh Controller Hardware Part
+For this project, the hardware part is very import,
+
+
+# RGBLED_Ligh Controller Software Part
 ------
 In this project, the software has two part, one is the slave part and the another one is master part.
 
@@ -11,6 +15,7 @@ This part will recive the command from the master part.
 The data frame is:
 
 Head  -  Address  -  Command  -  End
+
 0xAA  -    Addr   -  Command  -  0x55
 
 The Address is a uint8_t value range from 0~255, and 255 is the boardcast address, and 0 is a reserved address.
@@ -51,11 +56,13 @@ ledstatus_t eLEDStatus;
 The slave part can also set the address via UART, and the command data is like this:
 
 Head  --  Addr  --  Command  -- New Addr  --  END
+
 0xAA  --  0xFF  --   0xFF    --  New Addr --  0x55
 
 Then you can also get the slave address by send the following command:
 
 Head  --  Addr  --  Command  --  END
+
 0xAA  --  0xFF  --   0xFE    --  0x55
 
 Note: the 0xFF is the boardcast addr.
@@ -63,11 +70,23 @@ Note: the 0xFF is the boardcast addr.
 
 ## Master Part
 
-The Master part is used for sending command to the slave part, and this part has the following functions.
+For this system, there can be many master parts to control the light, the only thing that master part need to do is sending commands.
+
+The Master part1 is used for sending command to the slave part, and this part has the following functions.
 1. Recive IR command from the IR controller.
 2. Recive comand from the computer(just recive data from uart,and send it out via software serial).
 3. Change the display mode by a button.
+4. Turn ON/OFF the light by a button
 
-more description to be continued.
+
+
+More master part to be continued.
+
+## The Light Number 
+
+The following picture shows how the Light is arrranged.
+
+## The finished work
+
 
 
